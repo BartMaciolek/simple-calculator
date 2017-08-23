@@ -1,0 +1,15 @@
+/**
+ *
+ * header section styles
+ *
+ */
+ 
+ .main-header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 10px;
+
+    &-skin {
+        border-bottom: 1px dotted $header-border-color;
+    }
+}

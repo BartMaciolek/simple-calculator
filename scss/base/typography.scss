@@ -1,0 +1,31 @@
+/**
+ *
+ * general typography styles
+ *
+ */
+ 
+h1 {
+	@include text($header-font, 36px, 700, $color: $main-text-color);
+	text-align: center;
+
+	@include screen("mobile") {
+		font-size: 42px;
+	}
+}
+
+h2 {
+	@include text($header-font, 15px, 300, 1.6, $color: $main-text-color);
+	text-align: center;
+
+	@include screen("mobile-small") {
+		font-size: 16px;
+	}
+
+	@include screen("mobile") {
+		font-size: 22px;
+	}
+
+	@include screen("tablet") {
+		font-size: 26px;
+	}
+}

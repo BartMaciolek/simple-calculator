@@ -1,0 +1,34 @@
+// colors declarations
+$main-background-color: #ffffff;
+$main-border-color: #666666;
+$main-text-color: #000000;
+$light-text-color: #ffffff;
+$calculator-color: #695958;
+$calculator-shadow-color: #666666;
+$calculator-display-color: #bbbbbb;
+$calculator-display-border-color: #dfdfdf;
+$calculator-operator-buttons-color: #e2e8c0;
+$calculator-operator-buttons-hover-color: darken(#e2e8c0, 20%);
+$calculator-function-buttons-color: #e63946;
+$calculator-function-buttons-hover-color: darken(#e63946, 10%);
+
+$header-border-color: $main-border-color;
+$footer-border-color: $main-border-color;
+$calculator-display-font-color: $main-text-color;
+$calculator-operator-buttons-font-color: $main-text-color;
+$calculator-function-buttons-font-color: $light-text-color;
+
+// fonts declarations
+$main-font: 'Open Sans Condensed', sans-serif;
+$monotype-font: 'Encode Sans Condensed', sans-serif;
+
+$header-font: $main-font;
+$footer-font: $main-font;
+$calculator-display-font: $monotype-font;
+$calculator-buttons-font: $main-font;
+
+// media breakpoints declarations
+$desktop: 1024px;
+$tablet: 768px;
+$mobile: 460px;
+$mobile-small: 320px;

@@ -1,0 +1,38 @@
+// mixin which generate declarations related to font properties
+@mixin text($name, $size, $weight, $height: 1, $decoration: none, $color: null) {
+  color: $color;
+  font-family: $name;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  text-decoration: $decoration;
+}
+
+// mixin which generate media queries declarations depends on passed arguments
+@mixin screen($size, $size-min: null, $size-max: null) {
+  @if $size == "desktop" {
+    @media only screen and (min-width: #{$desktop}) {
+      @content;
+    }
+  }
+  @else if $size == "tablet" {
+    @media only screen and (min-width: #{$tablet}) {
+      @content;
+    }
+  }
+  @else if $size == "mobile" {
+    @media only screen and (min-width: #{$mobile}) {
+      @content;
+    }
+  }
+    @else if $size == "mobile-small" {
+    @media only screen and (min-width: #{$mobile-small}) {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and (min-width: #{$size-min}) and (max-width: #{$size-max}) {
+      @content;
+    }
+  }
+}

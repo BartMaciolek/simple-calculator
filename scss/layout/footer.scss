@@ -1,0 +1,20 @@
+/**
+ *
+ * footer section styles
+ *
+ */
+ 
+ .main-footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 30px;
+
+	&-skin {
+    	border-top: 1px dotted $footer-border-color;
+	}
+
+	& p {
+		@include text($footer-font, 16px, 700, $color: $main-text-color);
+		text-align: right;
+	}
+}

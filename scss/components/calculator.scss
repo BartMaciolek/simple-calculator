@@ -1,0 +1,120 @@
+/**
+ *
+ * calculator module styles
+ *
+ */
+ 
+ .calc {
+    width: 300px;
+    height: 470px;
+    margin: 0;
+    padding: 0;
+}
+
+.calc-box {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 10px 16px;
+
+    &-skin {
+        border-radius: 5px;
+        background-color: $calculator-color;
+        box-shadow: 4px 4px 30px $calculator-shadow-color;
+    }
+}
+
+.calc-box-display {
+    width: 100%;
+    height: 50px;
+    margin: 15px 0 20px;
+    padding: 10px;
+
+    &-skin {
+        text-align: right;
+        border: 2px solid $calculator-display-border-color;
+        border-radius: 4px;
+        background-color: $calculator-display-color;
+    }
+
+    & span {
+        @include text($calculator-display-font, 26px, 300, $color: $calculator-display-font-color);
+    }
+}
+
+.calc-box-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    -webkit-align-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.calc-box-button {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 50px;
+    -webkit-flex: 1 1 50px;
+    flex: 1 1 50px;
+    //width: 50px;
+    height: 40px;
+    margin: 10px;
+    padding: 5px 10px;
+
+    &-skin {
+        @include text($calculator-buttons-font, 26px, 700);
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    &-operator {
+        color: $calculator-operator-buttons-font-color;
+        border-top: 1px solid #888888;
+        border-right: 2px solid #444444;
+        border-bottom: 2px solid #444444;
+        border-left: 1px solid #888888;
+        background-color: $calculator-operator-buttons-color;
+
+        &:hover {
+            background-color: $calculator-operator-buttons-hover-color;
+        }
+    }
+
+    &-function {
+        color: $calculator-function-buttons-font-color;
+        border-top: 1px solid #cccccc;
+        border-right: 2px solid #888888;
+        border-bottom: 2px solid #888888;
+        border-left: 1px solid #cccccc;
+        background-color: $calculator-function-buttons-color;
+
+        &:hover {
+            background-color: $calculator-function-buttons-hover-color;
+        }
+    }
+
+    &-disabled {
+        opacity: .4;
+        cursor: auto;
+        background-color: #999999;
+
+        &:hover {
+            background-color: #999999;
+        }
+    }
+}
